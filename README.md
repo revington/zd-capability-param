@@ -8,20 +8,24 @@ You know, this "click on this link to validate your email account" or "click to 
 Generated tokens are:
 * Difficult to guess/tamper
 * Limited lifetime
+* URL not-unfriendly 
 
 ### Difficult to guess/tamper
 
-TTL + payload is signed with HMAC
+Because TTL + payload is signed with HMAC.
 
 ### Limited lifetime
 
-The link includes an expiration date. This expiration date is included in the HMAC signature 
+The link includes an expiration date. This expiration date is included in the HMAC signature.
 
 ### Secret rotation
 
 The HMAC secret could be easily rotated by just "pushing" more secrets. Each secret will be tested if the TTL looks good. For this reason it is important to set a low `maxSecrets` number (i.e 5).  
 Older secrets will get discarded.
 
+### URL not-unfriendly
+Token is kept short enough by encoding it as Base64. This Base64 string is also URL-encoded to prevent unfriendly url characters like %, /, ? or &
+.
 ## Install
 ```
 $ npm install zd-capability-param
