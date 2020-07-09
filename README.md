@@ -24,11 +24,11 @@ Check [express example](examples/express.js)
 ## API
 
 `capabilityParam.create(secret, [options])`   
-	* `#secret` Could be an string or an array of strings
-	* `#options` Optional
-		* `lifetime` Token lifetime in miliseconds
-		* `algorithm` A hash algoritm. Default `sha256`
-		* `maxSecrets` Max number of secrets to keep. See [secret rotation](#secret-rotation)
+* `#secret` Could be an string or an array of strings
+* `#options` Optional
+	* `lifetime` Token lifetime in miliseconds
+	* `algorithm` A hash algoritm. Default `sha256`
+	* `maxSecrets` Max number of secrets to keep. See [secret rotation](#secret-rotation)
 
 The algorithm is dependent on the available algorithms supported by the version of OpenSSL on the platform. Examples are 'sha256', 'sha512', etc. On recent releases of OpenSSL, `openssl list -digest-algorithms` (`openssl list-message-digest-algorithms` for older versions of OpenSSL) will display the available digest algorithms.
 
