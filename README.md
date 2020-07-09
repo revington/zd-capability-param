@@ -23,7 +23,7 @@ Check [express example](examples/express.js)
 
 ## API
 
-`capabilityParam.create(secret, [options])` 
+`capabilityParam.create(secret, [options])`   
 	* `#secret` Could be an string or an array of strings
 	* `#options` Optional
 		* `lifetime` Token lifetime in miliseconds
