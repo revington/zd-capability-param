@@ -13,10 +13,10 @@ $ npm install zd-capability-param
 
 
 ```javascript
-	// create a token valid for 48 hours
-	const CAPABILITY_PARAM_LIFETIME = 2 * 24 * 60 * 60 * 1000; // 48 HOURS
-	const param = capabilityParam.create('secret', CAPABILITY_PARAM_LIFETIME);
-	const token = param.encode({ validateEmail: user.email });
+// create a token valid for 48 hours
+const CAPABILITY_PARAM_LIFETIME = 2 * 24 * 60 * 60 * 1000; // 48 HOURS
+const param = capabilityParam.create('secret', CAPABILITY_PARAM_LIFETIME);
+const token = param.encode({ validateEmail: user.email });
 
 ```
 Check [express example](examples/express.js)
