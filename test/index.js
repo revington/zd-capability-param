@@ -3,20 +3,20 @@ const capabilityParam = require('..');
 const assert = require('assert');
 describe('Capability Param', function () {
     it('should encode/decode', function () {
-        const link = capabilityParam.create('secret', {
+        const param = capabilityParam.create('secret', {
             lifetime: 1000
         });
-        const encoded = link.encode('my payload');
-        const decoded = link.decode(encoded);
+        const encoded = param.encode('my payload');
+        const decoded = param.decode(encoded);
         assert.deepStrictEqual(decoded, 'my payload');
     });
     it('should fail when token has been manipulated', function () {
-        const link = capabilityParam.create('secret', {
+        const param = capabilityParam.create('secret', {
             lifetime: 1000
         });
-        const [validUntil, payload, signature] = link.encode('my payload').split('.');
+        const [validUntil, payload, signature] = param.encode('my payload').split('.');
         try {
-            const decoded = link.decode([validUntil, payload + 'a', signature].join('.'));
+            const decoded = param.decode([validUntil, payload + 'a', signature].join('.'));
         } catch (e) {
             if (e.message === 'invalid signature') {
                 return;
@@ -26,12 +26,12 @@ describe('Capability Param', function () {
         assert.fail('error not thrown');
     });
     it('should try decode with more than one secret', function () {
-        const link = capabilityParam.create('secret', {
+        const param = capabilityParam.create('secret', {
             lifetime: 1000
         });
-        const encoded = link.encode('my payload');
-        link.pushSecret('bla');
-        const decoded = link.decode(encoded);
+        const encoded = param.encode('my payload');
+        param.pushSecret('bla');
+        const decoded = param.decode(encoded);
         assert.deepStrictEqual(decoded, 'my payload');
     });
     it('should keep up to #maxSecrets', function () {
@@ -44,17 +44,17 @@ describe('Capability Param', function () {
             ['bla3', 'my payload'],
             ['bla4', 'invalid signature']
         ];
-        const link = capabilityParam.create('secret', {
+        const param = capabilityParam.create('secret', {
             lifetime: 1000
         });
-        const encoded = link.encode('my payload');
-        results.push(['start', link.decode(encoded)]);
+        const encoded = param.encode('my payload');
+        results.push(['start', param.decode(encoded)]);
         for (let i = 0; i < 5; i++) {
             let newSecret = 'bla' + i;
-            link.pushSecret(newSecret);
+            param.pushSecret(newSecret);
             let decoded;
             try {
-                decoded = link.decode(encoded);
+                decoded = param.decode(encoded);
             } catch (e) {
                 results.push([newSecret, e.message]);
                 continue;
