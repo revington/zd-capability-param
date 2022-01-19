@@ -1,27 +1,40 @@
 {
-	"name": "zd-capability-param",
-	"version": "2.0.3",
-	"description": "Library to create, validate and decode capability url tokens.  ",
-	"main": "index.js",
-	"scripts": {
-		"test": "nyc --reporter=html  mocha  --bail --timeout 10000 --check-leaks test",
-		"test-ci": "nyc --reporter=lcov  mocha test  --timeout 10000  --check-leaks "
-	},
-	"keywords": [
-		"capability url",
-		"capability params",
-		"transactional urls"
-	],
-	"author": "Pedro Narciso García Revington <p.revington@gmail.com> (https://github.com/revington)",
-	"license": "MIT",
-	"devDependencies": {
-		"express": "^4.17.2",
-		"jsdoc": "^3.6.7",
-		"mocha": "^9.1.4",
-		"nyc": "^15.1.0"
-	},
-	"engines": {
-		"node": ">=12"
-	},
-	"dependencies": {}
+  "name": "zd-capability-param",
+  "version": "2.0.3",
+  "description": "Library to create, validate and decode capability url tokens.  ",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc --reporter=html  mocha  --bail --timeout 10000 --check-leaks test",
+    "test-ci": "nyc --reporter=lcov  mocha test  --timeout 10000  --check-leaks "
+  },
+  "keywords": [
+    "capability url",
+    "capability params",
+    "transactional urls"
+  ],
+  "author": "Pedro Narciso García Revington <p.revington@gmail.com> (https://github.com/revington)",
+  "license": "MIT",
+  "devDependencies": {
+    "express": "^4.17.2",
+    "jsdoc": "^3.6.7",
+    "mocha": "^9.1.4",
+    "nyc": "^15.1.0"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "dependencies": {},
+  "directories": {
+    "example": "examples",
+    "lib": "lib",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/revington/zd-capability-param.git"
+  },
+  "bugs": {
+    "url": "https://github.com/revington/zd-capability-param/issues"
+  },
+  "homepage": "https://github.com/revington/zd-capability-param#readme"
 }
