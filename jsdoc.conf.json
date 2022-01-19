@@ -1,0 +1,31 @@
+{
+  "markdown": {
+    "hardwrap": true,
+    "parser": "gfm"
+  },
+  "mocha-docdash": {
+    "sort": true,
+    "static": false
+  },
+  "opts": {
+    "destination": "docs/api",
+    "encoding": "utf8",
+    "recurse": true,
+    "verbose": true
+  },
+  "plugins": ["plugins/markdown"],
+  "source": {
+    "include": ["lib/"]
+  },
+  "tags": {
+    "allowUnknownTags": true
+  },
+  "templates": {
+    "cleverLinks": false,
+    "default": {
+      "includeDate": false,
+      "outputSourceFiles": true
+    },
+    "monospaceLinks": false
+  }
+}
