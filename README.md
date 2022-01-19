@@ -97,4 +97,4 @@ param.pushSecret('new current secret');
 ```
 ## Security warning
 
-The `payload` is signed with HMAC and encoded to Base64 but IT IS NOT ENCRYPTED. Anyone can "see" the contents of the payload by decoding the string.
+The `payload` is signed with HMAC and encoded to Base64 but *IT IS NOT ENCRYPTED*. Anyone can "see" the contents of the payload by decoding the string.
