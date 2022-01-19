@@ -1,4 +1,6 @@
-[![Build Status](https://travis-ci.org/revington/zd-capability-param.svg?branch=master)](https://travis-ci.org/revington/zd-capability-param)
+
+![Build Status](https://github.com/revington/zd-capability-param/actions/workflows/node.js.yml/badge.svg)
+
 [![Known Vulnerabilities](https://snyk.io/test/github/revington/zd-capability-param/badge.svg?targetFile=package.json)](https://snyk.io/test/github/revington/zd-capability-param?targetFile=package.json)
 [![Coverage Status](https://coveralls.io/repos/github/revington/zd-capability-param/badge.svg?branch=master)](https://coveralls.io/github/revington/zd-capability-param?branch=master)
 # zd-capability-param
