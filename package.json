@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "test": "nyc --reporter=html  mocha  --bail --timeout 10000 --check-leaks test",
-        "test-ci": "nyc mocha test  --timeout 10000  --check-leaks "
+        "test-ci": "nyc --reporter=lcov  mocha test  --timeout 10000  --check-leaks "
     },
     "keywords": [],
     "author": "Pedro Narciso García Revington <p.revington@gmail.com> (https://github.com/revington)",
