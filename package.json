@@ -11,8 +11,8 @@
     "author": "Pedro Narciso García Revington <p.revington@gmail.com> (https://github.com/revington)",
     "license": "MIT",
     "devDependencies": {
-        "express": "^4.17.1",
-        "mocha": "^8.0.1",
+        "express": "^4.17.2",
+        "mocha": "^9.1.4",
         "nyc": "^15.1.0"
     }
 }
